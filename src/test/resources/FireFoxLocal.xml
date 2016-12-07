@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClientEnvironments>
+        <ClientEnvironment
+        	browsername="firefox"
+        	remoteflag = "false"/>
+        	<!-- 
+        	<ClientEnvironment
+        	browsername="chrome"
+        	remoteflag = "false"/> -->
+   </ClientEnvironments>

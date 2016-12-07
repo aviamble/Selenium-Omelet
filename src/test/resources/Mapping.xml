@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Mapping [ <!ELEMENT Mapping (Package+)> 
+<!ATTLIST Package name CDATA #REQUIRED>
+<!ATTLIST Package testData CDATA #IMPLIED> 
+<!ATTLIST Package clientEnvironment CDATA #IMPLIED>
+<!ATTLIST Package runStrategy (Full|Optimal) #IMPLIED> 
+<!ELEMENT Package (Class*)>
+<!ATTLIST Class name CDATA #REQUIRED>
+<!ATTLIST Class clientEnvironment CDATA #IMPLIED>
+<!ATTLIST Class testData CDATA #IMPLIED> 
+<!ATTLIST Class runStrategy (Full|Optimal) #IMPLIED>
+<!ELEMENT Class (MethodName*)>
+<!ATTLIST MethodName name CDATA #REQUIRED> 
+<!ATTLIST MethodName testData CDATA #IMPLIED> 
+<!ATTLIST MethodName clientEnvironment CDATA #IMPLIED> 
+<!ATTLIST MethodName runStrategy (Full|Optimal) #IMPLIED>]>
+
+<Mapping>
+	<Package name="com.ebay.tests" runStrategy="Full">
+		<Class name="com.ebay.tests.LogInTest" clientEnvironment="FireFoxLocal.xml" testData="LoginTestData.xml">
+			<MethodName name = "com.ebay.tests.LogInTest.verifyInvalidLogin" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.SearchProductTest" clientEnvironment="FireFoxLocal.xml" testData="SearchProductTestData.xml">
+			<MethodName name = "com.ebay.tests.SearchProductTest.searchProduct" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.PlaceBidTest" clientEnvironment="FireFoxLocal.xml" testData="PlaceBidTestData.xml">
+			<MethodName name = "com.ebay.tests.PlaceBidTest.verifyBidButton" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.SelectCategoryTest" clientEnvironment="FireFoxLocal.xml" testData="SelectCategoryTestData.xml">
+			<MethodName name = "com.ebay.tests.SelectCategoryTest.VerifyBooksMagazines" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.AddToCartTest" clientEnvironment="FireFoxLocal.xml" testData="AddToCartTestData.xml">
+			<MethodName name = "com.ebay.tests.AddToCartTest.VerifyAddingToCart" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.CartCountTest" clientEnvironment="FireFoxLocal.xml" testData="CartCountTestData.xml">
+			<MethodName name = "com.ebay.tests.CartCountTest.verifyCartCount" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<Class name="com.ebay.tests.RemoveFromCartTest" clientEnvironment="FireFoxLocal.xml" testData="RemoveFromCartTestData.xml">
+			<MethodName name = "com.ebay.tests.RemoveFromCartTest.verifyRemovingFromCart" clientEnvironment="FireFoxLocal.xml"></MethodName>
+		</Class>
+		<!-- <Class name="com.crest.test.test.datatest.GoogleTest" clientEnvironment="browsers/FireFoxLocal.xml;browsers/ChromeLocal.xml"></Class> -->
+	</Package>
+</Mapping>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE Conf [
+<!ELEMENT Conf (Data+)>
+<!ATTLIST Data environment CDATA #REQUIRED>
+<!ELEMENT Data (Pages)>
+<!ELEMENT Pages (Page+)>
+<!ATTLIST Page name CDATA #REQUIRED>
+]>
+
+<Conf>
+	<Data environment="Test">
+		<Pages>
+			<Page name="HomePage">
+				<url>http://www.ebay.in/</url>
+				<productname>Pen</productname>
+			</Page>			
+		</Pages>
+	</Data>
+
+<Data environment="Test">
+		<Pages>
+			<Page name="HomePage">
+				<url>http://www.ebay.in/</url>
+				<productname>Pencil</productname>
+			</Page>			
+		</Pages>
+	</Data>
+</Conf>

@@ -1,0 +1,28 @@
+<!DOCTYPE suite SYSTEM "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="Google Example Suite" verbose="2" parallel="tests"
+	thread-count="1" data-provider-thread-count="2">
+
+	<listeners>
+		<listener class-name="omelet.testng.support.TestInterceptor"></listener>
+		<listener class-name="omelet.driver.DriverInitialization"></listener>
+		<listener class-name="omelet.testng.support.RetryIAnnotationTransformer"></listener>
+		<listener class-name="omelet.driver.SuiteConfiguration"></listener>
+		<listener class-name="org.uncommons.reportng.HTMLReporter"></listener>
+	</listeners>
+
+	
+	<test name="SearchProductTest">
+		<classes>
+			<class name="com.ebay.tests.SearchProductTest" />
+		</classes>
+	</test>
+	
+	<test name="AddToCartTest">
+		<classes>
+			<class name="com.ebay.tests.AddToCartTest" />
+		</classes>
+	</test>
+	
+		 
+</suite> 
+ 
